@@ -7,10 +7,12 @@
           <Aside></Aside>
         </el-aside>
         <el-container>
-          <el-main>Main</el-main>
-          <el-footer>Copyright @ starstudio</el-footer>
+          <el-main>
+            <router-view></router-view>
+          </el-main>
         </el-container>
       </el-container>
+          <el-footer>Copyright @ starstudio</el-footer>
     </el-container>
   </div>
 </template>
@@ -36,12 +38,12 @@ export default {
   font-size: 1.4em
 }
 .el-footer {
-  background-color: #b3c0d1;
+  /* background-color: #b3c0d1; */
   color: #333;
   text-align: center;
   line-height: 60px;
   font-weight: lighter;
-  font-size: .8em
+  font-size: .8em;
 }
 
 .el-aside {

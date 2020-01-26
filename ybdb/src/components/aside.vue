@@ -1,7 +1,6 @@
 <template>
   <div class="aside">
     <el-menu
-      default-active="2"
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
@@ -15,13 +14,19 @@
           <span>评委信息管理</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="1-1">教师评委信息管理</el-menu-item>
-          <el-menu-item index="1-2">大众评审信息管理</el-menu-item>
+          <el-menu-item index="1-1">
+            <router-link tag="span" to="/teacher">教师评委信息管理</router-link>
+          </el-menu-item>
+          <el-menu-item index="1-2">
+            <router-link tag="span" to="/stu">大众评委信息管理</router-link>
+          </el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-menu-item index="2">
         <i class="el-icon-menu"></i>
-        <span slot="title">班级信息管理</span>
+        <span slot="title">
+          <router-link tag="span" to='/class'>班级信息管理</router-link>
+        </span>
       </el-menu-item>
       <el-submenu index="3">
         <template slot="title">
@@ -29,13 +34,19 @@
           <span>答辩现场管理</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="2-1">答辩开关控制</el-menu-item>
-          <el-menu-item index="2-2">答辩顺序控制</el-menu-item>
+          <el-menu-item index="2-1">
+            <router-link tag="span" to="/manage">答辩开关控制</router-link>
+          </el-menu-item>
+          <el-menu-item index="2-2">
+            <router-link tag="span" to="/turn">答辩顺序控制</router-link>
+          </el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-menu-item index="4">
         <i class="el-icon-setting"></i>
-        <span slot="title">分数管理</span>
+        <span slot="title">
+          <router-link tag="span" to='/grade'>分数管理</router-link>
+        </span>
       </el-menu-item>
     </el-menu>
   </div>
